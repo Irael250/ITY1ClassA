@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Form</title>
+</head>
+<body>
+
+    <div>
+
+        <fieldset>
+            <legend>Sign Up</legend>
+            <form action="" id="signupForm">
+                <input type="text" placeholder="Enter Your First Name" id="fn">
+                <input type="text" placeholder="Enter Your Last Name" id="ln">
+                <label for="DoB">Enter DOB</label>
+                <input type="date" id="DoB">
+                <button type="button" onclick="validateMe()">Submit</button>
+            </form>
+        </fieldset>
+    </div>
+    
+</body>
+<script>
+function validateMe() {
+    const fn = document.getElementById("fn").value;
+    const ln = document.getElementById("ln").value;
+    const DoB = document.getElementById("DoB").value;
+
+
+    if (fn === "" || ln === "" || DoB === "" ){
+        alert("Please make sure that all fields are filled out!");
+    } else {
+        alert("Congratulations, your data has been successfully inserted!");
+    }
+}
+</script>
+
+</html>
