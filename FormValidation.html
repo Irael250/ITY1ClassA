@@ -4,21 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Form</title>
+
+    
+    <style>
+
+      
+        .container{
+
+            width: 40%;
+            height: 400px;
+            background: #e3f0dd;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px 1px rgb(136, 209, 136);
+            margin: 0;
+            padding: 0;
+            position: relative;
+            top: 100px;
+            left: 400px;
+
+        }
+
+
+        form{
+            margin: 50px;
+            position: relative;
+            top: 10px;
+            
+        }
+
+        input{
+
+            width: 90%;
+            height: 30px;
+            position: relative;
+            left: 20px;
+        }
+
+        button{
+            width: 60%;
+            height: 30px;
+            position: relative;
+            left: 80px;
+            background: #1801ea;
+            color: antiquewhite;
+            border: none;
+            border-radius: 3px;
+        
+            
+        }
+        h1{
+            position: relative;
+            top: 30px;
+            left: 50px;
+            color: #1801ea;
+        }
+        label{
+
+            position: relative;
+            left: 20px;
+        }
+    </style>
 </head>
 <body>
 
-    <div>
-
-        <fieldset>
-            <legend>Sign Up</legend>
+    <div class="container">
+        <h1>SIGN UP HERE</h1>
             <form action="" id="signupForm">
-                <input type="text" placeholder="Enter Your First Name" id="fn">
-                <input type="text" placeholder="Enter Your Last Name" id="ln">
-                <label for="DoB">Enter DOB</label>
-                <input type="date" id="DoB">
+                <label for="">First Name</label>
+                <input type="text" placeholder="Enter Your First Name" id="fn"> <br> <br>
+                <label for="">Last Name</label>
+                <input type="text" placeholder="Enter Your Last Name" id="ln"> <br><br>
+                <label for="DoB">Enter DOB</label> <br> 
+                <input type="date" id="DoB" style="text-align: center;"> <br> <br>
                 <button type="button" onclick="validateMe()">Submit</button>
             </form>
-        </fieldset>
     </div>
     
 </body>
@@ -32,7 +92,7 @@ function validateMe() {
     if (fn === "" || ln === "" || DoB === "" ){
         alert("Please make sure that all fields are filled out!");
     } else {
-        alert("Congratulations, your data has been successfully inserted!");
+        alert("Congratulations  your data has been successfully inserted!");
     }
 }
 </script>
